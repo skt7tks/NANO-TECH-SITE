@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>რეგისტრაცია</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="registration-page">
+        <div class="registration-form-section">
+            <h1>Sign Up</h1>
+            <p>Fill out the form to create a new account</p>
+
+            <div class="registration-username-container">
+                <input class="name-input" type="text" name="username" placeholder="First Name" required>
+                <input class="name-input" type="text" name="lastname" placeholder="Last Name" required>
+            </div>
+
+            <div class="date-container">
+                <label for="dob" class="date-label">Date of Birth</label>
+                <div class="date-selection">
+                    <select class="date-decoration" name="year" required>
+                        <option value="">Year</option>
+                        <option>2024</option>
+                        <option>2023</option>
+                        <option>2022</option>
+                        <!-- სხვა წლები -->
+                    </select>
+                    <select class="date-decoration" name="month" required>
+                        <option value="">Month</option>
+                        <option>იან.</option>
+                        <option>თებ.</option>
+                        <option>მარ.</option>
+                        <!-- სხვა თვეები -->
+                    </select>
+                    <select class="date-decoration" name="day" required>
+                        <option value="">Day</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <!-- სხვა დღეები -->
+                    </select>
+                </div>
+            </div>
+
+            <div class="sex-container">
+                <label class="sex-label">Gender</label>
+                <div class="radio-buttons">
+                    <div class="radio-option">
+                        <input type="radio" name="sex" value="მდედრ." id="female" required>
+                        <label for="female">Female</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="sex" value="მამრ." id="male" required>
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="sex" value="სხვა" id="other" required>
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+            </div>
+
+            <input class="email-input" type="email" name="email" placeholder="Email or Mobile Number" required>
+            <input class="password-input" type="password" name="password" placeholder="New Password" required>
+            
+            <button class="registration-new-account">Sign Up</button>
+
+            <p class="login-link">
+                Already have an account? <a href="./login-if-you-are-registered.html">Log in</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

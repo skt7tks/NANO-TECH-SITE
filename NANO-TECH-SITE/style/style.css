@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root{
+    --Linear-gradient-borders: linear-gradient(90deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --Red: hsl(0, 100%, 66%);
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+    --Light-blue: hsl(200, 100%, 75%); /* ახალი ფერი */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+main{
+    display: flex;
+    min-height: 100vh;
+}
+
+#part_1{
+    flex-basis: 30%;
+    background: url("../images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: background-color 0.3s ease; /* ღია ფონის ეფექტი */
+}
+
+#part_1 .image_1{
+    background: url("../images/bg-card-front.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 1rem;
+    position: absolute;
+    top: 20%;
+    right: -30%;
+    width: 100%;
+    max-height: auto;
+    z-index: 10000;
+    height: 250px;
+    filter: grayscale(30%); /* ნაზად მუქი ეფექტი */
+    transition: filter 0.3s ease-in-out; /* ანიმაცია სურათის ეფექტზე */
+}
+
+#part_1 .image_1:hover{
+    filter: grayscale(0%); /* გამუქების დროს - სურათი იღებს ბუნებრივ ფერს */
+}
+
+#part_1 .image_1 .logo_part img{
+    width: 50px;
+    height: auto;
+}
+
+.card_num_part{
+    margin-top: 3rem;
+}
+
+.card_num_part h1{
+    color: var(--Light-grayish-violet);
+    font-size: 18px;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.2rem;
+}
+
+#part_1 .image_1 .last_part{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.last_part h2{
+    color: var(--Light-grayish-violet);
+    font-size: 10px;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+#part_1 .image_2{
+    background: url("../images/bg-card-back.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 5rem;
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    width: 100%;
+    max-height: auto;
+    position: relative;
+    height: 200px;
+    filter: grayscale(30%);
+    transition: filter 0.3s ease-in-out;
+}
+
+#part_1 .image_2 .cvc_part{
+    position: absolute;
+    top: 60%; /* CVC ახლოსაა */
+    right: 12%;
+    color: var(--White);
+    font-size: 14px;
+    letter-spacing: 0.2rem;
+}
+
+#part_1 .image_2:hover{
+    filter: grayscale(0%); /* სურათი ჩვეულებრივ ფერში */
+}
+
+#part_2{
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_form{
+    display: flex;
+    flex-direction: column;
+}
+
+.card_form div:nth-child(3){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card_form div{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card_form div:nth-child(3) div:nth-child(1) div{
+    flex-direction: row;
+    align-items: center;
+}
+
+.card_form div label{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bolder;
+    color: var(--Very-dark-violet);
+}
+
+.card_form div input{
+    outline: none;
+    background: transparent;
+    border: 1px solid var(--Light-grayish-violet);
+    border-radius: 6px;
+    margin-top: 15px;
+    padding: 1rem;
+    font-size: 18px;
+    transition: all .5s linear;
+    width: 100%;
+}
+
+.card_form div input:focus{
+    border-color: var(--Light-blue); /* ლურჯი ფერის გარშემო */
+}
+
+.err_text{
+    margin-top: 10px;
+    color: var(--Red);
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+.date_err, .cvc_err{
+    position: absolute;
+    top: 80%;
+    left: 0;
+}
+
+.complete_part{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    animation: fade 0.5s 1;
+}
+
+@keyframes fade{
+    from{opacity: 0.4}
+    to{opacity: 1.0}
+}
+
+.complete_part div{
+    margin-top: 1rem;
+}
+
+.complete_part .image_part img{
+    width: 50px;
+    height: auto;
+}
+
+.complete_part div h3{
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: var(--Very-dark-violet);
+    letter-spacing: 0.2rem;
+}
+
+.complete_part div p{
+    font-size: 15px;
+    margin-top: 1rem;
+    color: var(--Dark-grayish-violet);
+    font-weight: bolder;
+}
+
+.btn{
+    outline: none;
+    background: var(--Very-dark-violet);
+    border: none;
+    border-radius: 6px;
+    color: var(--White);
+    font-size: 12px;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: all .5s linear;
+}
+
+.btn:hover{
+    background: var(--Linear-gradient-borders);
+}
+
+.coder{
+    margin-top: 2rem;
+}
+
+.coder a{
+    text-decoration: none;
+    color: var(--Very-dark-violet);
+    transition: 0.3s linear;
+}
+
+.coder a:hover{
+    color: var(--Dark-grayish-violet);
+}
+
+@media (max-width: 800px){
+    main{
+        flex-direction: column;
+    }
+
+    #part_1 {
+        min-height: 250px;
+    }
+
+    #part_1 .image_1 {
+        top: 50%;
+        left: 5%;
+        width: 90%;
+    }
+
+    .card_num_part h1 {
+        word-spacing: 0.1rem;
+    }
+
+    #part_1 .image_2 {
+        margin-top: 2rem;
+        left: 18%;
+        width: 80%;
+    }
+
+    #part_2 {
+        align-items: normal;
+        margin-top: 2rem;
+        padding: 2rem;
+    }
+
+    .coder{
+        text-align: center;
+    }
+
+    .card_form div input {
+        font-size: 18px;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .card_form div label {
+        font-size: 14px;
+    }
+
+    /* Resize images for smaller screens */
+    #part_1 .image_1, #part_1 .image_2 {
+        height: 200px; /* ჩაანაცვლებს ზომას */
+    }
+
+    .cvc_part .cvc_num {
+        font-size: 14px;
+    }
+}

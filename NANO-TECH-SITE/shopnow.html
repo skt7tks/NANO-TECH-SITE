@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Jumanji | Interactive card details form</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <script defer src="script/script.js"></script>
+</head>
+<body>
+
+  <main>
+    <section id="part_1">
+      <div class="image_1">
+        <div class="logo_part">
+          <img src="images/card-logo.svg" alt="card logo">
+        </div>
+
+        <div class="card_num_part">
+          <h1 class="card_num">0000 0000 0000 0000</h1>
+        </div>
+
+        <div class="last_part">
+          <div>
+            <h2 class="holder_name">Jane Appleseed</h2>
+          </div>
+          <div>
+            <h2 class="exp_date"><span class="m">00</span>/<span class="y">00</span></h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="image_2">
+        <div class="cvc_part">
+          <p class="cvc_num">000</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="part_2">
+      <form class="card_form">
+        <div>
+          <label for="holder">Cardholder Name</label>
+          <input type="text" name="holder" id="holder" class="holder_name_input" placeholder="e.g. Jane Appleseed" maxlength="25">
+          <span class="err_text holder_err"></span>
+
+        </div>
+
+        <div>
+          <label for="c_num">Card Number</label>
+          <input type="text" name="holder" id="c_num" class="card_num_input" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+          <span class="err_text card_err"></span>
+        </div>
+
+        <div>
+          <div>
+            <label for="ex_date" style="margin-bottom: 0rem;">Exp. Date (MM/YY)</label>
+            <div style="position: relative;margin-top: -0.5rem">
+              <input type="number" name="month" id="ex_date" placeholder="MM" min="1" max="12" style="width: 50%;" class="month_input">
+              <input type="number" name="year" id="ex_date" placeholder="YY" min="00" max="50" style="margin-left: 0.1rem; width: 50%;" class="year_input">
+              <span class="err_text date_err"></span>
+
+            </div>
+          </div>
+
+          <div style="margin-left: 0.5rem;width: 50%;position: relative;">
+            <label for="cvc">CVC</label>
+            <input type="number" name="cvc" placeholder="e.g. 123" min="000" max="999"  class="cvc_num_input" style="margin-bottom: 0.5rem;">
+            <span class="err_text cvc_err"></span>
+          </div>
+        </div>
+        
+
+        <div>
+          <button class="confirm_btn btn" type="submit">Confirm</button>
+        </div>
+      </form>
+
+      <div class="complete_part" style="display: none;">
+        <div class="image_part">
+          <img src="images/icon-complete.svg" alt="confirmed complete icon">
+        </div>
+
+        <div>
+          <h3>Thank you!</h3>
+          <p>We've added your card details</p>
+        </div>
+
+        <div>
+          <button class="btn" onclick="Continue()">Continue</button>
+        </div>
+      </div>
+
+      <div class="coder">
+        <small>CODED BY SABA MANAGADZE</small>
+      </div>
+    </section>
+  </main>
+
+
+</body>
+</html>
